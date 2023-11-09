@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::-webkit-scrollbar {
+    @apply w-1;
+}
+
+body::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-md;
+}
+
+#table-scroll::-webkit-scrollbar {
+    @apply w-1 h-2 bg-transparent block;
+}
+#table-scroll::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+#table-scroll::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-md border-none;
+}
+
+#table-scroll::-webkit-scrollbar-track-piece:end {
+    @apply bg-transparent mb-2
+}
+
+#table-scroll::-webkit-scrollbar-track-piece:start {
+    @apply bg-transparent mt-2
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+.navbar {
+    @apply bg-primary text-primary p-5 py-3;
+}
+
+.link {
+    @apply text-lg hover:text-gray-400;
+}
+
+.loader {
+    border-top-color: #008EBC;
+    -webkit-animation: spinner 1.5s linear infinite;
+    animation: spinner 1.5s linear infinite;
+}
+
+.loaderButton {
+    border-top-color: transparent;
+    -webkit-animation: spinner 1.5s linear infinite;
+    animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+:root {
+    @apply light;
+}
+
+.dark {
+    --color-bg-primary: #181818;
+    --color-bg-secondary: #212121;
+    --color-border: #3d3d3d;
+    --color-buttonPrimary: #008EBC;
+    --color-text-primary: #aaaaaa;
+    --color-text-secondary: #ffffff;
+    color-scheme: dark;
+}
+
+.light {
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #dee4e7;
+    --color-border: #a8a8a8;
+    --color-buttonPrimary: #008EBC;
+    --color-text-primary: #4b4b4b;
+    --color-text-secondary: #181818;
+}
+
+@media print {
+    .two {
+        column-count: 2;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+    }
+    .print-2-columns {
+        column-count: 1;
+        -webkit-column-count: 2;
+        -moz-column-count: 1;
+        column-gap: 10px;
+    }
+}
+
+.dark-date::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.light-date::-webkit-calendar-picker-indicator {
+    filter: invert(0);
+}
+
+@layer components {
+    /* .my-react-select-container {
+  } */
+    .my-react-select-container .my-react-select__control {
+        @apply h-10 bg-secondary transition ease-in-out duration-300 rounded-md border border-border ring-transparent;
+    }
+
+    .my-react-select-container .my-react-select__control--is-focused {
+        @apply outline-none ring-2 ring-opacity-50 border-buttonPrimary ring-blue-400/50;
+    }
+
+    .my-react-select-container .my-react-select__control--is-disabled {
+        @apply opacity-50 cursor-not-allowed pointer-events-none;
+    }
+
+    .my-react-select-container .my-react-select__menu {
+        @apply bg-primary rounded-md border border-gray-200 dark:border-gray-800 w-max min-w-full;
+    }
+    .my-react-select-container .my-react-select__menu-list {
+        @apply rounded-md;
+    }
+
+    .my-react-select-container .my-react-select__menu-list::-webkit-scrollbar {
+        @apply w-1 my-1;
+    }
+    .my-react-select-container
+        .my-react-select__menu-list::-webkit-scrollbar-track {
+        @apply opacity-0 my-1;
+    }
+    .my-react-select-container
+        .my-react-select__menu-list::-webkit-scrollbar-thumb {
+        @apply bg-border rounded-md my-1;
+    }
+
+    .my-react-select-container .my-react-select__option {
+        @apply bg-primary text-primary text-xs hover:bg-secondary hover:text-secondary;
+    }
+
+    .my-react-select-container .my-react-select__option--is-selected {
+        @apply bg-secondary text-secondary;
+    }
+
+    .my-react-select-container .my-react-select__option--is-focused {
+        @apply bg-border text-secondary;
+    }
+
+    .my-react-select-container .my-react-select__option--is-disabled {
+        @apply opacity-50 ;
+    }
+
+    .my-react-select-container .my-react-select__input-container,
+    .my-react-select-container .my-react-select__placeholder,
+    .my-react-select-container .my-react-select__single-value {
+        @apply text-primary;
+    }
+}

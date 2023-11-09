@@ -1,0 +1,331 @@
+{
+	"navigation": {
+		"logout": "Keluar",
+		"login": "Masuk",
+		"sysAdmin": "Sistem Administrasi",
+		"appLogin": "Masuk Aplikasi"
+	},
+	"errors": {
+		"pageNotFound": {
+			"title": "Halaman tidak ditemukan",
+			"description": "Halaman yang kamu tuju tidak ada atau mungkin sudah dihapus",
+			"action": "Kembali ke halaman sebelumnya / Halaman utama"
+		},
+		"permissionDenied": {
+			"title": "Akses ditolak",
+			"description": "Kamu tidak memiliki akses ke halaman yang dituju",
+			"action": "Kembali ke halaman sebelumnya"
+		},
+		"serverNotAvailable": {
+			"title": "Server tidak tersedia",
+			"description": "Server sedang sibuk atau dalam perbaikan",
+			"action": "Coba lagi"
+		}
+	},
+	"tax": "PPn",
+	"taxes": {
+		"list": {
+			"title": "Daftar PPn"
+		},
+		"add": {
+			"title": "Tambah PPn Baru",
+			"name": "Nama PPn",
+			"value": "Nilai",
+			"isDefault": "Pakai Default"
+		},
+		"update": {
+			"title": "Perbarui PPn"
+		}
+	},
+	"element": {
+		"outletName": "Nama Outlet",
+		"outletCode": "Kode Outlet",
+		"autoCalc": "Auto Calc",
+		"branch": "Cabang",
+		"groupCode": "Grup Kode",
+		"warehouse": "Gudang",
+		"customers": "Pelanggan",
+		"customerType": "Tipe pelanggan",
+		"address": "Alamat",
+		"province": "Provinsi",
+		"city": "Kota",
+		"district": "Kecamatan",
+		"village": "Kelurahan",
+		"suppliers": "Pemasok",
+		"salesman": "Sales",
+		"groupSalesman": "Group Sales",
+		"product": "Produk",
+		"in": "Masuk",
+		"out": "Keluar",
+		"ndc": "Ndc",
+		"tier": "Tingkat",
+		"unit": "Unit",
+		"qty": "Qty",
+		"price": "Harga",
+		"avgSales": "Penjualan Rata-rata",
+		"original_price": "Harga master",
+		"discount": "Diskon",
+		"total": "Total",
+		"amount": "Amount",
+		"debit": "Debit",
+		"credit": "Credit",
+		"balance": "Keseimbangan",
+		"invoice": "Invoice",
+		"collector": "Penagih",
+		"bill": "Tagihan",
+		"capital": "Modal",
+		"profit": "Laba Rugi",
+		"uploadImage": "Upload Gambar",
+		"location": "Lokasi",
+		"bankAccount": "Akun Bank",
+		"overdue": "Terlambat"
+	},
+	"general": {
+		"days": {
+			"sunday": "Minggu",
+			"monday": "Senin",
+			"tuesday": "Selasa",
+			"wednesday": "Rabu",
+			"thursday": "Kamis",
+			"friday": "Jumat",
+			"saturday": "Sabtu"
+		},
+		"homepage": "Halaman Utama",
+		"autoGenerate": "Auto Generate",
+		"group": "Grup",
+		"import": "Import",
+		"exportColumn": "Ekspor Kolom",
+		"importColumn": "Impor Kolom",
+		"selectFile": "Pilih File",
+		"show": "Tampilkan",
+		"openingBalance": "Saldo Awal",
+		"endingBalance": "Saldo Akhir",
+		"download": "Unduh",
+		"noTransactions": "Belum Ada Transaksi",
+		"parameter": "Parameter",
+		"lock": "Kunci",
+		"submit": "Kirim",
+		"duplicate": "Duplikat",
+		"lockInvoice": "Kunci Faktur",
+		"unlockInvoice": "Buka Kunci Faktur",
+		"lockedByAdministrator": "Dikunci oleh administrator",
+		"day": "Hari",
+		"month": "Bulan",
+		"year": "Tahun",
+		"status": "Status",
+		"descr": "Keterangan",
+		"add": "Tambah",
+		"update": "Perbarui",
+		"active": "Aktif",
+		"delete": "Hapus",
+		"edit": "Sunting",
+		"select": "Pilih...",
+		"save": "Simpan",
+		"next": "Berikutnya",
+		"in": "Masuk",
+		"out": "Keluar",
+		"date": "Tanggal",
+		"time": "Waktu",
+		"dueDate": "Jatuh tempo",
+		"number": "Nomor",
+		"close": "Keluar",
+		"saveNew": "Simpan & tambah baru",
+		"yes": "Ya",
+		"no": "Tidak",
+		"cancel": "Batal",
+		"cancelChanges": {
+			"title": "Batalkan Perubahan",
+			"description": "Anda yakin ingin membatalkan perubahan?"
+		},
+		"action": "Aksi",
+		"release": "Rilis",
+		"dataIsNotAvailable": "Data tidak tersedia",
+		"transaction": "Transaksi",
+		"oos": "Stok kosong",
+		"stock": "Stok",
+		"analysis": "Analisis",
+		"cl": "Limit Kredit",
+		"countLimit": "Limit Faktur",
+		"ar": "Piutang",
+		"so": "Order Pengajuan",
+		"startDate": "Tanggal awal",
+		"endDate": "Tanggal akhir",
+		"process": "Proses",
+		"view": "Lihat",
+		"print": "Cetak",
+		"clear": "Kosongkan",
+		"memo": "Catatan",
+		"selectAll": "Pilih semua",
+		"invoiceAmount": "Tagihan",
+		"payment": "Pembayaran",
+		"basicInfo": "Info Dasar",
+		"attribute": "Atribut"
+	},
+	"table": {
+		"id": "ID",
+		"name": "Nama",
+		"active": "Aktif",
+		"edit": "Sunting",
+		"dataNotAvailable": "Tidak ada data tersedia",
+		"pagination": {
+			"page": "Halaman",
+			"from": "Dari",
+			"goToPage": "Pergi ke halaman",
+			"rowInPage": "Baris di 1 halaman",
+			"result": "Hasil"
+		},
+		"filterDates": "Filter tanggal",
+		"hideColumns": "Sembunyikan Kolom"
+	},
+	"toast": {
+		"add": {
+			"success": "Data Berhasil Disimpan",
+			"failed": "Data Gagal Disimpan",
+			"productExist": "Produk sudah ditambahkan"
+		},
+		"update": {
+			"success": "Data Berhasil Diperbarui",
+			"failed": "Data Gagal Diperbarui"
+		},
+		"delete": {
+			"success": "Data Berhasil Dihapus",
+			"failed": "Data Gagal Dihapus"
+		},
+		"dispatch": {
+			"noDelivery": "Tidak ada driver dipilih",
+			"noDriver": "Supir / kendaraan tidak boleh kosong",
+			"duplicateDriver": "Driver sudah ada"
+		},
+		"error": {
+			"notBalance": "Angka Keseimbangan Harus Nol"
+		}
+	},
+	"sidebar": {
+		"accountReceivableImport": "Import Penerimaan Piutang", 
+		"accountReceivableList": "Daftar Penerimaan Piutang", 
+		"activityLog": "Log Aktifitas",
+		"master": "Master",
+		"homepage": "Halaman Utama",
+		"companies": "Perusahaan",
+		"branches": "Cabang",
+		"users": "Pengguna",
+		"roles": "Role",
+		"accountReceivable": "Penerimaan Piutang"
+	},
+	"company": {
+		"list": {
+			"title": "Daftar Perusahaan",
+			"code": "Kode Perusahaan",
+			"name": "Nama Perusahaan",
+			"address": "Alamat Perusahaan"
+		},
+		"add": {
+			"id": "ID Perusahaan",
+			"title": "Buat Perusahaan Baru",
+			"name": "Nama Perusahaan",
+			"address": "Alamat Perusahaan",
+			"phone": "Telepon Perusahaan",
+			"email": "Email Perusahaan",
+			"tax_id": "NPWP Perusahaan",
+			"tax_name": "Nama Pajak Perusahaan",
+			"tax_address": "Alamat Pajak Perusahaan"
+		},
+		"update": {
+			"title": "Perbarui Perusahaan"
+		}
+	},
+	"branch": {
+		"list": {
+			"title": "Daftar Cabang",
+			"name": "Nama Cabang"
+		},
+		"add": {
+			"title": "Buat cabang baru",
+			"id": "ID cabang",
+			"name": "Nama cabang"
+		},
+		"update": {
+			"title": "Perbarui cabang"
+		}
+	},
+	"users": {
+		"roles": {
+			"title": "Jabatan pengguna"
+		},
+		"list": {
+			"title": "Daftar pengguna"
+		},
+		"add": {
+			"title": "Tambah pengguna baru",
+			"name": "Nama",
+			"full_name": "Nama lengkap",
+			"password": "Kata sandi",
+			"confirmPassword": "Konfirmasi Kata sandi",
+			"passwordDoesntMatch": "Password Tidak Cocok",
+			"isSalesman": "Salesman",
+			"selectGroupSales": "Pilih Grup salesman",
+			"branch": "Cabang",
+			"selectBranch": "Pilih Cabang",
+			"avatar": "Avatar"
+		},
+		"update": {
+			"title": "Perbarui Pengguna"
+		},
+		"profile": {
+			"title": "Profil"
+		},
+		"permissions": {
+			"title": "Otorisasi"
+		},
+		"changePassword": "Ganti Password"
+	},
+	"roles": {
+		"list": {
+			"title": "Daftar Role"
+		},
+		"add": {
+			"title": "Buat Role Baru",
+			"addModule": "Tambah Module Baru",
+			"name": "Nama Role"
+		},
+		"update": {
+			"title": "Perbarui Role"
+		}
+	},
+	"login": {
+		"title": "Masuk"
+	},
+	"dashboard": {
+		"title": "Dashboard"
+	},
+	"admin": {
+		"profile": "Profil",
+		"setting": "Pengaturan"
+	},
+	"setting": {
+		"title": "Pengaturan",
+		"theme": "Tema"
+	},
+	"locale": {
+		"title": "Bahasa",
+		"en": "English",
+		"id": "Indonesia"
+	},
+	"profile": {
+		"list": {
+			"title": "Daftar Profil"
+		},
+		"add": {
+			"title": "Tambah Profil Baru",
+			"id": "ID Profil",
+			"parameter": "Parameter Profil",
+			"descr": "Keterangan Profil",
+			"category": "Kategori Profil",
+			"accountPosTax": "Perkiraan POS Pajak",
+			"accountPos": "Perkiraan POS"
+		},
+		"update": {
+			"title": "Perbarui Profil"
+		}
+	}
+}

@@ -1,0 +1,98 @@
+[
+	{
+		"id": 1,
+		"name": "sales",
+		"description": "Penjualan",
+		"active": 1
+	},
+	{
+		"id": 2,
+		"name": "product",
+		"description": "Produk",
+		"active": 1
+	},
+	{
+		"id": 3,
+		"name": "career",
+		"description": "Career",
+		"active": 1
+	},
+	{
+		"id": 5,
+		"name": "contact",
+		"description": "Kontak",
+		"active": 1
+	},
+	{
+		"id": 6,
+		"name": "users",
+		"description": "Pengguna",
+		"active": 1
+	},
+	{
+		"id": 7,
+		"name": "accountReceivable",
+		"description": "Piutang",
+		"active": 1
+	},
+	{
+		"id": 8,
+		"name": "note",
+		"description": "Pembukuan",
+		"active": 1
+	},
+	{
+		"id": 9,
+		"name": "company",
+		"description": "Perusahaan",
+		"active": 1
+	},
+	{
+		"id": 10,
+		"name": "purchase",
+		"description": "Pembelian",
+		"active": 1
+	},
+	{
+		"id": 11,
+		"name": "warehouse",
+		"description": "Gudang",
+		"active": 1
+	},
+	{
+		"id": 12,
+		"name": "accounting",
+		"description": "Akunting",
+		"active": 1
+	},
+	{
+		"id": 13,
+		"name": "accountPayable",
+		"description": "Hutang",
+		"active": 1
+	},
+	{
+		"id": 14,
+		"name": "online",
+		"description": "Online",
+		"active": 1
+	},
+	{
+		"id": 15,
+		"name": "delivery",
+		"description": "Pengiriman",
+		"active": 1
+	},
+	{
+		"id": 16,
+		"name": "finance",
+		"description": "Keuangan",
+		"active": 1
+	},
+	{
+		"id": 17,
+		"name": "system",
+		"description": "Sistem",
+		"active": 1
+	}
+]

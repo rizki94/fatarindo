@@ -1,0 +1,317 @@
+{
+	"navigation": {
+		"logout": "Logout",
+		"login": "Login",
+		"sysAdmin": "System Administrator",
+		"appLogin": "App Login"
+	},
+	"errors": {
+		"pageNotFound": {
+			"title": "Page Not Found",
+			"description": "Page you are trying to react is not found or maybe deleted",
+			"action": "Back to previous page / Homepage"
+		},
+		"permissionDenied": {
+			"title": "Permission Denied",
+			"description": "You dont have access to page you are trying to reach",
+			"action": "Back to previous page"
+		},
+		"serverNotAvailable": {
+			"title": "Server not Available",
+			"description": "Server is busy or under maintenance",
+			"action": "Try again"
+		}
+	},
+	"tax": "Tax",
+	"taxes": {
+		"list": {
+			"title": "Taxes List"
+		},
+		"add": {
+			"title": "Add new Tax",
+			"name": "Tax Name",
+			"value": "Value",
+			"isDefault": "Is Default"
+		},
+		"update": {
+			"title": "Update Tax"
+		}
+	},
+	"element": {
+		"outletName": "Outlet Name",
+		"outletCode": "Outlet Code",
+		"branch": "Branch",
+		"groupCode": "Group Code",
+		"warehouse": "Warehouse",
+		"customers": "Customers",
+		"customerType": "Customer type",
+		"address": "Address",
+		"province": "Province",
+		"city": "City",
+		"district": "District",
+		"village": "Village",
+		"suppliers": "Suppliers",
+		"salesman": "Salesman",
+		"groupSalesman": "Group Salesman",
+		"product": "Product",
+		"in": "In",
+		"out": "Out",
+		"ndc": "Ndc",
+		"tier": "Tier",
+		"unit": "Unit",
+		"qty": "Qty",
+		"price": "Price",
+		"avgPrice": "Average Sales",
+		"openingBalance": "Opening Balance",
+		"original_price": "Original price",
+		"discount": "Discount",
+		"amount": "Amount",
+		"total": "Total",
+		"debit": "Debit",
+		"credit": "Credit",
+		"balance": "Balance",
+		"invoice": "Invoice",
+		"collector": "Collector",
+		"bill": "Bill",
+		"capital": "Capital",
+		"profit": "Profit",
+		"uploadImage": "Upload Image",
+		"location": "Location",
+		"bankAccount": "Bank Account",
+		"overdue": "Overdue"
+	},
+	"general": {
+		"days": {
+			"sunday": "Sunday",
+			"monday": "Monday",
+			"tuesday": "Tuesday",
+			"wednesday": "Wednesday",
+			"thursday": "Thursday",
+			"friday": "Friday",
+			"saturday": "Saturday"
+		},
+		"autoGenerate": "Auto Generate",
+		"group": "Group",
+		"import": "Import",
+		"selectFile": "Select File",
+		"autoCalc": "Auto Calc",
+		"show": "Show",
+		"exportColumn": "Export Column",
+		"importColumn": "Import Column",
+		"openingBalance": "Opening Balance",
+		"endingBalance": "Ending Balance",
+		"download": "Unduh",
+		"noTransactions": "No Transactions Yet",
+		"parameter": "Parameter",
+		"lock": "Lock",
+		"submit": "Submit",
+		"duplicate": "Duplicate",
+		"lockInvoice": "Lock Invoice",
+		"unlockInvoice": "Unlock Invoice",
+		"lockedByAdministrator": "Locked By Administrator",
+		"day": "Day",
+		"month": "Month",
+		"year": "Year",
+		"descr": "Description",
+		"status": "Status",
+		"add": "Add",
+		"update": "Update",
+		"active": "Active",
+		"delete": "Delete",
+		"edit": "Edit",
+		"select": "Select...",
+		"save": "Save",
+		"next": "Next",
+		"in": "In",
+		"out": "Out",
+		"time": "Time",
+		"date": "Date",
+		"dueDate": "Due date",
+		"number": "Number",
+		"saveNew": "Save & new",
+		"yes": "Yes",
+		"no": "No",
+		"close": "Close",
+		"cancel": "Cancel",
+		"cancelChanges": {
+			"title": "Discard changes",
+			"description": "Are you sure want to discard changes?"
+		},
+		"action": "Action",
+		"release": "Release",
+		"dataIsNotAvailable": "Data is not available",
+		"transaction": "Transaction",
+		"oos": "Out of stock",
+		"stock": "Stock",
+		"analysis": "Analysis",
+		"cl": "Credit Limit",
+		"countLimit": "Count Limit",
+		"ar": "Credit",
+		"so": "Submission order",
+		"startDate": "Start date",
+		"endDate": "End date",
+		"process": "Process",
+		"view": "View",
+		"print": "Print",
+		"clear": "Clear",
+		"memo": "Memo",
+		"selectAll": "Select All",
+		"invoiceAmount": "Invoice Amount",
+		"payment": "Payment",
+		"basicInfo": "Basic Info",
+		"attribute": "Attribute"
+	},
+	"table": {
+		"id": "ID",
+		"name": "Name",
+		"active": "Active",
+		"edit": "Edit",
+		"dataNotAvailable": "Data not available",
+		"pagination": {
+			"page": "Page",
+			"from": "From",
+			"goToPage": "Go to page",
+			"rowInPage": "Row in 1 page",
+			"result": "Result"
+		},
+		"filterDates": "Filter dates",
+		"hideColumns": "Hide Columns"
+	},
+	"toast": {
+		"add": {
+			"success": "Create Data Success",
+			"failed": "Create Data Failed",
+			"productExist": "Item is already submited"
+		},
+		"update": {
+			"success": "Update Data Success",
+			"failed": "Update Data Failed"
+		},
+		"delete": {
+			"success": "Delete Data Success",
+			"failed": "Delete Data Failed"
+		},
+		"dispatch": {
+			"noDelivery": "No driver selected",
+			"noDriver": "Driver / vehicle should not be empty",
+			"duplicateDriver": "Duplicate Driver"
+		}, 
+		"error": {
+			"notBalance": "Balance Value Should be Zero"
+		}
+	},
+	"sidebar": {
+		"accountReceivableImport": "Account Receivable Import", 
+		"accountReceivableList": "Account Receivable", 
+		"activityLog": "Activity Log",
+		"master": "Master",
+		"homepage": "Homepage",
+		"users": "Users",
+		"roles": "Roles",
+		"accountReceivable": "Account Receivable"
+	},
+	"company": {
+		"list": {
+			"title": "Companies List",
+			"id": "Companies ID",
+			"name": "Companies Name",
+			"address": "Companies Address"
+		},
+		"add": {
+			"id": "Company ID",
+			"title": "Create New Company",
+			"code": "Company Code",
+			"name": "Company Name",
+			"address": "Company Address",
+			"phone": "Company Phone",
+			"email": "Company Email",
+			"tax_id": "Company Tax Id",
+			"tax_name": "Company Tax Name",
+			"tax_address": "Company Tax Address"
+		},
+		"update": {
+			"title": "Update Company"
+		}
+	},
+	"branch": {
+		"list": {
+			"title": "Branches List",
+			"name": "Branches Name"
+		},
+		"add": {
+			"title": "Create new branch",
+			"id": "Branch ID",
+			"name": "Branch name"
+		},
+		"update": {
+			"title": "Update branch"
+		}
+	},
+	"users": {
+		"roles": {
+			"title": "User roles"
+		},
+		"list": {
+			"title": "List user"
+		},
+		"add": {
+			"title": "Create new user",
+			"name": "Name",
+			"full_name": "Full name",
+			"password": "Password",
+			"confirmPassword": "Confirm Password",
+			"passwordDoesntMatch": "Password Doesn't Match",
+			"isSalesman": "Salesman",
+			"selectGroupSales": "Select Group Salesman",
+			"branch": "Branch",
+			"selectBranch": "Select Branch",
+			"avatar": "Avatar"
+		},
+		"update": {
+			"title": "Update user"
+		},
+		"profile": {
+			"title": "Profile"
+		},
+		"permissions": {
+			"title": "Permission"
+		},
+		"changePassword": "Change Password"
+	},
+	"login": {
+		"title": "Login"
+	},
+	"dashboard": {
+		"title": "Dashboard"
+	},
+	"admin": {
+		"profile": "Profile",
+		"setting": "Setting"
+	},
+	"setting": {
+		"title": "Setting",
+		"theme": "Theme"
+	},
+	"locale": {
+		"title": "Languanges",
+		"en": "English",
+		"id": "Indonesia"
+	},
+	"profile": {
+		"list": {
+			"title": "Profile List"
+		},
+		"add": {
+			"title": "Add New Profile",
+			"id": "Profile ID",
+			"parameter": "Profile Parameter",
+			"descr": "Profile Description",
+			"category": "Profile Category",
+			"accountPosTax": "POS Account Tax",
+			"accountPos": "POS Account"
+		},
+		"update": {
+			"title": "Update Profile"
+		}
+	}
+}

@@ -1,0 +1,1031 @@
+[
+	{
+		"id": 1,
+		"module_group_id": 3,
+		"name": "career-list",
+		"description": "Daftar Karir",
+		"active": 1
+	},
+	{
+		"id": 2,
+		"module_group_id": 3,
+		"name": "career-create",
+		"description": "Tambah Karir",
+		"active": 1
+	},
+	{
+		"id": 3,
+		"module_group_id": 3,
+		"name": "career-update",
+		"description": "Perbarui Karir",
+		"active": 1
+	},
+	{
+		"id": 4,
+		"module_group_id": 3,
+		"name": "career-selection",
+		"description": "Seleksi Karir",
+		"active": 1
+	},
+	{
+		"id": 5,
+		"module_group_id": 2,
+		"name": "product-list",
+		"description": "Daftar Produk",
+		"active": 1
+	},
+	{
+		"id": 6,
+		"module_group_id": 2,
+		"name": "product-create",
+		"description": "Tambah Produk",
+		"active": 1
+	},
+	{
+		"id": 7,
+		"module_group_id": 2,
+		"name": "product-update",
+		"description": "Perbarui Produk",
+		"active": 1
+	},
+	{
+		"id": 8,
+		"module_group_id": 5,
+		"name": "customer-list",
+		"description": "Daftar Pelanggan",
+		"active": 1
+	},
+	{
+		"id": 9,
+		"module_group_id": 5,
+		"name": "customer-create",
+		"description": "Tambah Pelanggan",
+		"active": 1
+	},
+	{
+		"id": 10,
+		"module_group_id": 5,
+		"name": "customer-update",
+		"description": "Perbarui Pelanggan",
+		"active": 1
+	},
+	{
+		"id": 11,
+		"module_group_id": 6,
+		"name": "user-list",
+		"description": "Daftar Pengguna",
+		"active": 1
+	},
+	{
+		"id": 12,
+		"module_group_id": 6,
+		"name": "user-create",
+		"description": "Tambah Pengguna",
+		"active": 1
+	},
+	{
+		"id": 13,
+		"module_group_id": 6,
+		"name": "user-update",
+		"description": "Perbarui Pengguna",
+		"active": 1
+	},
+	{
+		"id": 14,
+		"module_group_id": 11,
+		"name": "location-list",
+		"description": "Daftar Gudang",
+		"active": 1
+	},
+	{
+		"id": 15,
+		"module_group_id": 11,
+		"name": "location-create",
+		"description": "Tambah Gudang",
+		"active": 1
+	},
+	{
+		"id": 16,
+		"module_group_id": 11,
+		"name": "location-update",
+		"description": "Perbarui Gudang",
+		"active": 1
+	},
+	{
+		"id": 17,
+		"module_group_id": 1,
+		"name": "transaction-sales-list",
+		"description": "Daftar Penjualan",
+		"active": 1
+	},
+	{
+		"id": 18,
+		"module_group_id": 1,
+		"name": "transaction-sales-create",
+		"description": "Tambah Penjualan",
+		"active": 1
+	},
+	{
+		"id": 19,
+		"module_group_id": 1,
+		"name": "transaction-sales-update",
+		"description": "Perbarui Penjualan",
+		"active": 1
+	},
+	{
+		"id": 20,
+		"module_group_id": 1,
+		"name": "transaction-sales-make-invoice",
+		"description": "Buat Faktur Penjualaan",
+		"active": 1
+	},
+	{
+		"id": 21,
+		"module_group_id": 7,
+		"name": "payment-ar-list",
+		"description": "Daftar Pelunasan Piutang",
+		"active": 1
+	},
+	{
+		"id": 22,
+		"module_group_id": 7,
+		"name": "payment-ar-create",
+		"description": "Tambah Pelunasan Piutang",
+		"active": 1
+	},
+	{
+		"id": 23,
+		"module_group_id": 7,
+		"name": "payment-ar-update",
+		"description": "Perbarui Pelunasan Piutang",
+		"active": 1
+	},
+	{
+		"id": 25,
+		"module_group_id": 2,
+		"name": "product-stock",
+		"description": "Stock",
+		"active": 1
+	},
+	{
+		"id": 27,
+		"module_group_id": 2,
+		"name": "productbrand-create",
+		"description": "Tambah Brand Produk",
+		"active": 1
+	},
+	{
+		"id": 28,
+		"module_group_id": 2,
+		"name": "productbrand-update",
+		"description": "Perbarui Brand Produk",
+		"active": 1
+	},
+	{
+		"id": 29,
+		"module_group_id": 2,
+		"name": "productcategory-create",
+		"description": "Tambah Kategori Produk",
+		"active": 1
+	},
+	{
+		"id": 30,
+		"module_group_id": 2,
+		"name": "productcategory-update",
+		"description": "Perbarui Kategori Produk",
+		"active": 1
+	},
+	{
+		"id": 31,
+		"module_group_id": 2,
+		"name": "productdivision-create",
+		"description": "Tambah Divisi Produk",
+		"active": 1
+	},
+	{
+		"id": 32,
+		"module_group_id": 2,
+		"name": "productdivision-update",
+		"description": "Perbarui Divisi Produk",
+		"active": 1
+	},
+	{
+		"id": 33,
+		"module_group_id": 8,
+		"name": "note-list",
+		"description": "Daftar Jurnal",
+		"active": 1
+	},
+	{
+		"id": 34,
+		"module_group_id": 8,
+		"name": "note-create",
+		"description": "Tambah Jurnal",
+		"active": 1
+	},
+	{
+		"id": 35,
+		"module_group_id": 8,
+		"name": "note-update",
+		"description": "Perbarui Jurnal",
+		"active": 1
+	},
+	{
+		"id": 36,
+		"module_group_id": 9,
+		"name": "company-list",
+		"description": "Daftar Perusahaan",
+		"active": 1
+	},
+	{
+		"id": 37,
+		"module_group_id": 9,
+		"name": "company-create",
+		"description": "Tambah Perusahaan",
+		"active": 1
+	},
+	{
+		"id": 38,
+		"module_group_id": 9,
+		"name": "company-update",
+		"description": "Perbarui Perusahaan",
+		"active": 1
+	},
+	{
+		"id": 39,
+		"module_group_id": 9,
+		"name": "branch-list",
+		"description": "Daftar Cabang",
+		"active": 1
+	},
+	{
+		"id": 40,
+		"module_group_id": 9,
+		"name": "branch-create",
+		"description": "Tambah Cabang",
+		"active": 1
+	},
+	{
+		"id": 41,
+		"module_group_id": 9,
+		"name": "branch-update",
+		"description": "Perbarui Cabang",
+		"active": 1
+	},
+	{
+		"id": 42,
+		"module_group_id": 6,
+		"name": "user-roles",
+		"description": "Role Pengguna",
+		"active": 1
+	},
+	{
+		"id": 43,
+		"module_group_id": 6,
+		"name": "role-list",
+		"description": "Daftar Role",
+		"active": 1
+	},
+	{
+		"id": 44,
+		"module_group_id": 6,
+		"name": "role-create",
+		"description": "Tambah Role",
+		"active": 1
+	},
+	{
+		"id": 45,
+		"module_group_id": 6,
+		"name": "role-update",
+		"description": "Perbarui Role",
+		"active": 1
+	},
+	{
+		"id": 46,
+		"module_group_id": 10,
+		"name": "transaction-purchase-list",
+		"description": "Daftar Transaksi Pembelian",
+		"active": 1
+	},
+	{
+		"id": 47,
+		"module_group_id": 10,
+		"name": "transaction-purchase-create",
+		"description": "Tambah Transaksi Pembelian",
+		"active": 1
+	},
+	{
+		"id": 48,
+		"module_group_id": 10,
+		"name": "transaction-purchase-update",
+		"description": "Perbarui Transaksi Pembelian",
+		"active": 1
+	},
+	{
+		"id": 49,
+		"module_group_id": 5,
+		"name": "supplier-list",
+		"description": "Daftar Pemasok",
+		"active": 1
+	},
+	{
+		"id": 50,
+		"module_group_id": 5,
+		"name": "supplier-create",
+		"description": "Tambah Pemasok",
+		"active": 1
+	},
+	{
+		"id": 51,
+		"module_group_id": 5,
+		"name": "supplier-update",
+		"description": "Perbarui Pemasok",
+		"active": 1
+	},
+	{
+		"id": 52,
+		"module_group_id": 11,
+		"name": "picking-list",
+		"description": "Daftar Picking",
+		"active": 1
+	},
+	{
+		"id": 53,
+		"module_group_id": 15,
+		"name": "delivery-list",
+		"description": "Daftar Pengiriman",
+		"active": 1
+	},
+	{
+		"id": 54,
+		"module_group_id": 1,
+		"name": "report-sales",
+		"description": "Laporan Penjualan",
+		"active": 1
+	},
+	{
+		"id": 55,
+		"module_group_id": 12,
+		"name": "ledger-report",
+		"description": "Laporan Buku Besar",
+		"active": 1
+	},
+	{
+		"id": 56,
+		"module_group_id": 1,
+		"name": "transaction-salesreturn-list",
+		"description": "Daftar Transaksi Retur Penjualan",
+		"active": 1
+	},
+	{
+		"id": 57,
+		"module_group_id": 1,
+		"name": "transaction-salesreturn-create",
+		"description": "Tambah Transaksi Retur Penjualan",
+		"active": 1
+	},
+	{
+		"id": 58,
+		"module_group_id": 1,
+		"name": "transaction-salesreturn-update",
+		"description": "Perbarui Transaksi Retur Penjualan",
+		"active": 1
+	},
+	{
+		"id": 59,
+		"module_group_id": 10,
+		"name": "transaction-purchasereturn-list",
+		"description": "Daftar Transaksi Retur Pembelian",
+		"active": 1
+	},
+	{
+		"id": 60,
+		"module_group_id": 10,
+		"name": "transaction-purchasereturn-create",
+		"description": "Tambah Transaksi Retur Pembelian",
+		"active": 1
+	},
+	{
+		"id": 61,
+		"module_group_id": 10,
+		"name": "transaction-purchasereturn-update",
+		"description": "Perbarui Transaksi Retur Pembelian",
+		"active": 1
+	},
+	{
+		"id": 62,
+		"module_group_id": 13,
+		"name": "bill-ap-list",
+		"description": "Daftar Pelunasan Hutang",
+		"active": 1
+	},
+	{
+		"id": 63,
+		"module_group_id": 13,
+		"name": "bill-ap-create",
+		"description": "Tambah Pelunasan Hutang",
+		"active": 1
+	},
+	{
+		"id": 64,
+		"module_group_id": 13,
+		"name": "bill-ap-update",
+		"description": "Perbarui Pelunasan Hutang",
+		"active": 1
+	},
+	{
+		"id": 65,
+		"module_group_id": 1,
+		"name": "open-invoices",
+		"description": "Buka Transaksi",
+		"active": 1
+	},
+	{
+		"id": 66,
+		"module_group_id": 2,
+		"name": "price-list",
+		"description": "Daftar Harga Barang",
+		"active": 1
+	},
+	{
+		"id": 67,
+		"module_group_id": 14,
+		"name": "marketplace-list",
+		"description": "Daftar Marketplace",
+		"active": 1
+	},
+	{
+		"id": 68,
+		"module_group_id": 14,
+		"name": "marketplace-create",
+		"description": "Tambah Marketplace",
+		"active": 1
+	},
+	{
+		"id": 69,
+		"module_group_id": 14,
+		"name": "marketplace-update",
+		"description": "Perbarui Marketplace",
+		"active": 1
+	},
+	{
+		"id": 70,
+		"module_group_id": 5,
+		"name": "marketplace-account-list",
+		"description": "Daftar Akun Marketplace",
+		"active": 1
+	},
+	{
+		"id": 71,
+		"module_group_id": 5,
+		"name": "marketplace-account-create",
+		"description": "Tambah Akun Marketplace",
+		"active": 1
+	},
+	{
+		"id": 72,
+		"module_group_id": 5,
+		"name": "marketplace-account-update",
+		"description": "Perbarui Akun Marketplace",
+		"active": 1
+	},
+	{
+		"id": 73,
+		"module_group_id": 1,
+		"name": "transaction-online-list",
+		"description": "Daftar Transaksi Penjualan Online",
+		"active": 1
+	},
+	{
+		"id": 74,
+		"module_group_id": 1,
+		"name": "transaction-online-create",
+		"description": "Tambah Transaksi Penjualan Online",
+		"active": 1
+	},
+	{
+		"id": 75,
+		"module_group_id": 1,
+		"name": "transaction-online-update",
+		"description": "Perbarui Transaksi Penjualan Online",
+		"active": 1
+	},
+	{
+		"id": 76,
+		"module_group_id": 1,
+		"name": "transaction-store-list",
+		"description": "Daftar Transaksi Penjualan Toko",
+		"active": 1
+	},
+	{
+		"id": 77,
+		"module_group_id": 1,
+		"name": "transaction-store-create",
+		"description": "Tambah Transaksi Penjualan Toko",
+		"active": 1
+	},
+	{
+		"id": 78,
+		"module_group_id": 1,
+		"name": "transaction-store-update",
+		"description": "Perbarui Transaksi Penjualan Toko",
+		"active": 1
+	},
+	{
+		"id": 79,
+		"module_group_id": 2,
+		"name": "product",
+		"description": "Produk",
+		"active": 1
+	},
+	{
+		"id": 80,
+		"module_group_id": 2,
+		"name": "stock-mutation",
+		"description": "Stok Mutasi",
+		"active": 1
+	},
+	{
+		"id": 81,
+		"module_group_id": 15,
+		"name": "driver-list",
+		"description": "Daftar Supir",
+		"active": 1
+	},
+	{
+		"id": 82,
+		"module_group_id": 15,
+		"name": "driver-create",
+		"description": "Tambah Supir",
+		"active": 1
+	},
+	{
+		"id": 83,
+		"module_group_id": 15,
+		"name": "driver-update",
+		"description": "Perbarui Supir",
+		"active": 1
+	},
+	{
+		"id": 84,
+		"module_group_id": 15,
+		"name": "truck-list",
+		"description": "Daftar Truk",
+		"active": 1
+	},
+	{
+		"id": 85,
+		"module_group_id": 15,
+		"name": "truck-create",
+		"description": "Tambah Truk",
+		"active": 1
+	},
+	{
+		"id": 86,
+		"module_group_id": 15,
+		"name": "truck-update",
+		"description": "Perbarui Truk",
+		"active": 1
+	},
+	{
+		"id": 87,
+		"module_group_id": 11,
+		"name": "transfer-stock-list",
+		"description": "Daftar Transaksi Transfer Stok",
+		"active": 1
+	},
+	{
+		"id": 88,
+		"module_group_id": 11,
+		"name": "transfer-stock-create",
+		"description": "Tambah Transaksi Transfer Stok",
+		"active": 1
+	},
+	{
+		"id": 89,
+		"module_group_id": 11,
+		"name": "transfer-stock-update",
+		"description": "Perbarui Transaksi Transfer Stok",
+		"active": 1
+	},
+	{
+		"id": 90,
+		"module_group_id": 15,
+		"name": "dispatch-create",
+		"description": "Tambah Kiriman",
+		"active": 1
+	},
+	{
+		"id": 91,
+		"module_group_id": 15,
+		"name": "dispatch-update",
+		"description": "Perbarui Kiriman",
+		"active": 1
+	},
+	{
+		"id": 92,
+		"module_group_id": 12,
+		"name": "worksheet-report",
+		"description": "Laporan Neraca Lajur",
+		"active": 1
+	},
+	{
+		"id": 93,
+		"module_group_id": 12,
+		"name": "account",
+		"description": "Akun",
+		"active": 1
+	},
+	{
+		"id": 94,
+		"module_group_id": 12,
+		"name": "account-list",
+		"description": "Daftar Akun",
+		"active": 1
+	},
+	{
+		"id": 95,
+		"module_group_id": 12,
+		"name": "account-create",
+		"description": "Tambah Akun",
+		"active": 1
+	},
+	{
+		"id": 96,
+		"module_group_id": 12,
+		"name": "account-update",
+		"description": "Perbarui Akun ",
+		"active": 1
+	},
+	{
+		"id": 97,
+		"module_group_id": 6,
+		"name": "user-profile",
+		"description": "Profile Pengguna",
+		"active": 1
+	},
+	{
+		"id": 98,
+		"module_group_id": 1,
+		"name": "call",
+		"description": "Call",
+		"active": 1
+	},
+	{
+		"id": 99,
+		"module_group_id": 12,
+		"name": "bank-list",
+		"description": "Daftar Bank",
+		"active": 1
+	},
+	{
+		"id": 100,
+		"module_group_id": 12,
+		"name": "bank-create",
+		"description": "Tambah Bank",
+		"active": 1
+	},
+	{
+		"id": 101,
+		"module_group_id": 12,
+		"name": "bank-update",
+		"description": "Perbarui Bank",
+		"active": 1
+	},
+	{
+		"id": 102,
+		"module_group_id": 14,
+		"name": "marketplace-fee-list",
+		"description": "Daftar Biaya Admin Marketplace",
+		"active": 1
+	},
+	{
+		"id": 103,
+		"module_group_id": 14,
+		"name": "marketplace-fee-create",
+		"description": "Tambah Biaya Admin Marketplace",
+		"active": 1
+	},
+	{
+		"id": 104,
+		"module_group_id": 14,
+		"name": "marketplace-fee-update",
+		"description": "Perbarui Biaya Admin Marketplace",
+		"active": 1
+	},
+	{
+		"id": 105,
+		"module_group_id": 14,
+		"name": "campaign-list",
+		"description": "Daftar Kampanye",
+		"active": 1
+	},
+	{
+		"id": 106,
+		"module_group_id": 14,
+		"name": "campaign-create",
+		"description": "Tambah Kampanye",
+		"active": 1
+	},
+	{
+		"id": 107,
+		"module_group_id": 14,
+		"name": "campaign-update",
+		"description": "Perbarui Kampanye",
+		"active": 1
+	},
+	{
+		"id": 108,
+		"module_group_id": 15,
+		"name": "print-invoice-delivery",
+		"description": "Cetak Faktur Kiriman",
+		"active": 1
+	},
+	{
+		"id": 109,
+		"module_group_id": 10,
+		"name": "print-invoice-purchase",
+		"description": "Cetak Faktur Pembelian",
+		"active": 1
+	},
+	{
+		"id": 110,
+		"module_group_id": 10,
+		"name": "print-invoice-purchase-return",
+		"description": "Cetak Faktur Retur Pembelian",
+		"active": 1
+	},
+	{
+		"id": 111,
+		"module_group_id": 1,
+		"name": "print-invoice-sales-return",
+		"description": "Cetak Faktur Retur Penjualan",
+		"active": 1
+	},
+	{
+		"id": 112,
+		"module_group_id": 11,
+		"name": "print-invoice-transfer-stock",
+		"description": "Cetak Faktur Transfer Stok",
+		"active": 1
+	},
+	{
+		"id": 113,
+		"module_group_id": 12,
+		"name": "reconciliation-list",
+		"description": "Daftar Rekonsiliasi",
+		"active": 1
+	},
+	{
+		"id": 114,
+		"module_group_id": 1,
+		"name": "print-invoice-sales",
+		"description": "Cetak Faktur Penjualan",
+		"active": 1
+	},
+	{
+		"id": 115,
+		"module_group_id": 12,
+		"name": "balance-report",
+		"description": "Laporan Nerace",
+		"active": 1
+	},
+	{
+		"id": 116,
+		"module_group_id": 12,
+		"name": "print-balance-report",
+		"description": "Cetak Laporan Nerace",
+		"active": 1
+	},
+	{
+		"id": 117,
+		"module_group_id": 12,
+		"name": "tax-list",
+		"description": "Daftar PPn",
+		"active": 1
+	},
+	{
+		"id": 118,
+		"module_group_id": 12,
+		"name": "tax-create",
+		"description": "Tambah PPn Baru",
+		"active": 1
+	},
+	{
+		"id": 119,
+		"module_group_id": 12,
+		"name": "tax-update",
+		"description": "Perbarui PPn",
+		"active": 1
+	},
+	{
+		"id": 120,
+		"module_group_id": 1,
+		"name": "call-plan",
+		"description": "Call Plan",
+		"active": 1
+	},
+	{
+		"id": 121,
+		"module_group_id": 16,
+		"name": "delivery-deposit-list",
+		"description": "Daftar Setoran Pengiriman",
+		"active": 1
+	},
+	{
+		"id": 122,
+		"module_group_id": 15,
+		"name": "loader-list",
+		"description": "Daftar Pengangkut",
+		"active": 1
+	},
+	{
+		"id": 123,
+		"module_group_id": 15,
+		"name": "loader-create",
+		"description": "Tambah Pengangkut Baru",
+		"active": 1
+	},
+	{
+		"id": 124,
+		"module_group_id": 15,
+		"name": "loader-update",
+		"description": "Perbarui Pengangkut",
+		"active": 1
+	},
+	{
+		"id": 125,
+		"module_group_id": 16,
+		"name": "print-delivery-deposit",
+		"description": "Cetak Setoran Pengiriman",
+		"active": 1
+	},
+	{
+		"id": 126,
+		"module_group_id": 1,
+		"name": "pos-list",
+		"description": "Daftar Point Of Sales",
+		"active": 1
+	},
+	{
+		"id": 127,
+		"module_group_id": 1,
+		"name": "pos-create",
+		"description": "Tambah Point Of Sales Baru",
+		"active": 1
+	},
+	{
+		"id": 128,
+		"module_group_id": 1,
+		"name": "pos-update",
+		"description": "Perbarui Point Of Sales",
+		"active": 1
+	},
+	{
+		"id": 129,
+		"module_group_id": 17,
+		"name": "profile-list",
+		"description": "Daftar Profil",
+		"active": 1
+	},
+	{
+		"id": 130,
+		"module_group_id": 17,
+		"name": "profile-create",
+		"description": "Tambah Profil Baru",
+		"active": 1
+	},
+	{
+		"id": 131,
+		"module_group_id": 17,
+		"name": "profile-update",
+		"description": "Perbarui Profil",
+		"active": 1
+	},
+	{
+		"id": 132,
+		"module_group_id": 16,
+		"name": "bill-schedule",
+		"description": "Jadwal Pembayaran",
+		"active": 1
+	},
+	{
+		"id": 133,
+		"module_group_id": 14,
+		"name": "campaign-approve",
+		"description": "Approve Kampanye Online",
+		"active": 1
+	},
+	{
+		"id": 134,
+		"module_group_id": 7,
+		"name": "payment-ar-approve",
+		"description": "Approve Pelunasan Piutang",
+		"active": 1
+	},
+	{
+		"id": 135,
+		"module_group_id": 13,
+		"name": "bill-ap-approve",
+		"description": "Approve Pelunasan Hutang",
+		"active": 1
+	},
+	{
+		"id": 136,
+		"module_group_id": 1,
+		"name": "pos-print",
+		"description": "Cetak Cekout Penjualan",
+		"active": 1
+	},
+	{
+		"id": 137,
+		"module_group_id": 1,
+		"name": "pos-profit",
+		"description": "Laporan Laba Rugi Point Of Sale",
+		"active": 1
+	},
+	{
+		"id": 138,
+		"module_group_id": 2,
+		"name": "print-stock-mutation",
+		"description": "Cetak Laporan Mutasi Stock",
+		"active": 1
+	},
+	{
+		"id": 139,
+		"module_group_id": 1,
+		"name": "pos-report",
+		"description": "Laporan Cekout Kasir",
+		"active": 1
+	},
+	{
+		"id": 140,
+		"module_group_id": 12,
+		"name": "loss-profit-report",
+		"description": "Laporan Rugi Laba",
+		"active": 1
+	},
+	{
+		"id": 141,
+		"module_group_id": 8,
+		"name": "open-notes",
+		"description": "Buka Jurnal",
+		"active": 1
+	},
+	{
+		"id": 142,
+		"module_group_id": 8,
+		"name": "note-approve",
+		"description": "Approve Pembukuan",
+		"active": 1
+	},
+	{
+		"id": 143,
+		"module_group_id": 10,
+		"name": "report-purchase",
+		"description": "Laporan Pembelian",
+		"active": 1
+	},
+	{
+		"id": 144,
+		"module_group_id": 11,
+		"name": "product-mutation",
+		"description": "Mutasi Produk",
+		"active": 1
+	},
+	{
+		"id": 145,
+		"module_group_id": 12,
+		"name": "cashflow",
+		"description": "Arus Kas",
+		"active": 1
+	},
+	{
+		"id": 146,
+		"module_group_id": 2,
+		"name": "purchase-higher-than-sell",
+		"description": "Harga Beli Lebih Tinggi Dari Harga Jual",
+		"active": 1
+	},
+	{
+		"id": 147,
+		"module_group_id": 2,
+		"name": "unit-list",
+		"description": "Daftar Unit",
+		"active": 1
+	},
+	{
+		"id": 148,
+		"module_group_id": 2,
+		"name": "unit-create",
+		"description": "Tambah Unit",
+		"active": 1
+	},
+	{
+		"id": 149,
+		"module_group_id": 2,
+		"name": "unit-update",
+		"description": "Perbarui Unit",
+		"active": 1
+	}
+]
