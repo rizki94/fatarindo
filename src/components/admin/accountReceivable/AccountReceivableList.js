@@ -121,6 +121,7 @@ const AccountReceivableList = () => {
 				isLoading={isLoading}
 				disableFilters={false}
 				disableSortBy={false}
+				pagination
 			/>
 		</Container>
 	);
