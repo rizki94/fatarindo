@@ -161,9 +161,11 @@ const AccountReceivableList = () => {
 			},
 			{
 				Header: t("element.amount"),
-				accessor: (d) => numberWithComma(d.amount),
+				accessor: 'amount',
+				Cell:({row}) => {
+					return numberWithComma(row.original.amount)
+				},
 				Filter: false,
-				sortType: "basic",
 			},
 			{
 				Header: t("general.status"),
