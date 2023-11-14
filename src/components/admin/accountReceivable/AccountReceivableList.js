@@ -163,6 +163,7 @@ const AccountReceivableList = () => {
 				Header: t("element.amount"),
 				accessor: (d) => numberWithComma(d.amount),
 				Filter: false,
+				sortType: "basic",
 			},
 			{
 				Header: t("general.status"),
