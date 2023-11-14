@@ -159,7 +159,8 @@
 		"invoiceAmount": "Tagihan",
 		"payment": "Pembayaran",
 		"basicInfo": "Info Dasar",
-		"attribute": "Atribut"
+		"attribute": "Atribut",
+		"changes": "Perubahan"
 	},
 	"table": {
 		"id": "ID",

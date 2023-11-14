@@ -163,6 +163,36 @@ function SelectColumnFilter({
 	);
 }
 
+function SelectUniqueColumn({
+	column: { filterValue, setFilter, preFilteredRows, id },
+}) {
+	const options = useMemo(() => {
+		const options = new Set();
+		preFilteredRows.forEach((row) => {
+			options.add(row.values[id]);
+		});
+		return [...options.values()];
+	}, [id, preFilteredRows]);
+
+	return (
+		<select
+			id={id}
+			className="h-6 bg-secondary focus:outline-none transition ease-in-out duration-300 rounded-md border border-gray-200 dark:border-gray-700 ring ring-transparent focus:border-blue-600 focus:ring-blue-400/50"
+			value={filterValue}
+			onChange={(e) => {
+				setFilter(e.target.value || undefined);
+			}}
+		>
+			<option value="">Semua</option>
+			{options.map((option, i) => (
+				<option key={i} value={option}>
+					{option}
+				</option>
+			))}
+		</select>
+	);
+}
+
 function StatusColumnFilter({
 	column: { filterValue, setFilter, preFilteredRows, id },
 }) {
@@ -294,6 +324,7 @@ function Table({
 	scrollToBot,
 	selectedRows,
 	onSelectedRowsChange,
+	autoResetPage,
 	isLoading,
 	columns,
 	data,
@@ -363,6 +394,7 @@ function Table({
 			initialState: {
 				selectedRowIds: selectedRows ? selectedRows : "",
 			},
+			autoResetPage: autoResetPage,
 			defaultColumn,
 			filterTypes,
 			updateMyData,
@@ -404,14 +436,6 @@ function Table({
 	useEffect(() => {
 		scrollToBot && scrollToEnd?.current?.scrollIntoView({ behavior: "smooth" });
 	}, [data, scrollToBot]);
-
-	useMountedLayoutEffect(() => {
-		onRowSelect && onRowSelect(selectedFlatRows.map((d) => d.original));
-	}, [selectedRowIds]);
-
-	useEffect(() => {
-		onSelectedRowsChange && onSelectedRowsChange(selectedRowIds);
-	}, [selectedRowIds]);
 
 	return (
 		<>
@@ -750,38 +774,38 @@ function Table({
 	);
 }
 
-const EditableCell = ({
-	value: initialValue,
-	row: { index },
-	column: { id },
-	updateMyData,
-}) => {
-	const [value, setValue] = useState(initialValue);
+// const EditableCell = ({
+// 	value: initialValue,
+// 	row: { index },
+// 	column: { id },
+// 	updateMyData,
+// }) => {
+// 	const [value, setValue] = useState(initialValue);
 
-	const onBlur = () => {
-		updateMyData(index, id, value);
-	};
+// 	const onBlur = () => {
+// 		updateMyData(index, id, value);
+// 	};
 
-	useEffect(() => {
-		setValue(initialValue);
-	}, [initialValue]);
+// 	useEffect(() => {
+// 		setValue(initialValue);
+// 	}, [initialValue]);
 
-	return (
-		<NumberFormat
-			className=" pl-1 pt-1 pb-1 bg-transparent w-min focus:outline-none transition ease-in-out duration-300 rounded-md border border-gray-200 dark:border-gray-700 focus:border-blue-600 ring ring-transparent focus:ring-2 focus:ring-opacity-50 focus:ring-blue-400/50"
-			thousandSeparator={true}
-			inputMode="numeric"
-			fixedDecimalScale={true}
-			decimalScale={2}
-			value={value}
-			onValueChange={(values) => {
-				const { value } = values;
-				setValue(value);
-			}}
-			onBlur={onBlur}
-		/>
-	);
-};
+// 	return (
+// 		<NumberFormat
+// 			className=" pl-1 pt-1 pb-1 bg-transparent w-min focus:outline-none transition ease-in-out duration-300 rounded-md border border-gray-200 dark:border-gray-700 focus:border-blue-600 ring ring-transparent focus:ring-2 focus:ring-opacity-50 focus:ring-blue-400/50"
+// 			thousandSeparator={true}
+// 			inputMode="numeric"
+// 			fixedDecimalScale={true}
+// 			decimalScale={2}
+// 			value={value}
+// 			onValueChange={(values) => {
+// 				const { value } = values;
+// 				setValue(value);
+// 			}}
+// 			onBlur={onBlur}
+// 		/>
+// 	);
+// };
 
 const IndeterminateCheckbox = forwardRef(({ indeterminate, ...rest }, ref) => {
 	const defaultRef = useRef();
@@ -797,9 +821,9 @@ const IndeterminateCheckbox = forwardRef(({ indeterminate, ...rest }, ref) => {
 export {
 	Table,
 	SelectColumnFilter,
+	SelectUniqueColumn,
 	StatusColumnFilter,
 	SliderColumnFilter,
 	NumberRangeColumnFilter,
-	EditableCell,
 	GlobalFilter,
 };

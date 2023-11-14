@@ -42,7 +42,7 @@ const CustomModal = ({
 					</div>
 					<div
 						id="table-scroll"
-						className="flex-auto w-full p-1 overflow-y-scroll max-h-[28rem]"
+						className="flex-auto w-full p-1 overflow-y-scroll max-h-[30rem]"
 					>
 						{children}
 					</div>

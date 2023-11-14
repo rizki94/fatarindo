@@ -159,7 +159,8 @@
 		"invoiceAmount": "Invoice Amount",
 		"payment": "Payment",
 		"basicInfo": "Basic Info",
-		"attribute": "Attribute"
+		"attribute": "Attribute",
+		"changes": "Changes"
 	},
 	"table": {
 		"id": "ID",
