@@ -3,7 +3,7 @@ import { useFetch, useFetchWithParams } from "../../../hooks/useFetch";
 import { useTranslation } from "react-i18next";
 import useDocTitle from "../../../hooks/useDocTitle";
 import { Container, Select } from "../../../layouts/forms/Index";
-import { Table } from "../../Table";
+import { NumberRangeColumnFilter, Table } from "../../Table";
 import { numberWithComma } from "../../../utils/helpers";
 import { apiClient } from "../../../services/api";
 import useAuth from "../../../hooks/useAuth";
@@ -46,13 +46,15 @@ const AccountReceivableList = () => {
 						...object,
 						overdue: Math.ceil(diffTime / (1000 * 60 * 60 * 24)),
 					};
+				}).sort((a, b) => {
+					return a.overdue-b.overdue
 				})
-			);
+			)
 		}
 	}, [data]);
 
 	const updateMyData = (rowIndex, columnId, value) => {
-		setSkipPageReset(false)
+		setSkipPageReset(false);
 		setAccountReceivable((old) =>
 			old.map((row, index) => {
 				if (index === rowIndex) {
@@ -75,7 +77,7 @@ const AccountReceivableList = () => {
 		const [value, setValue] = useState(initialValue);
 
 		const onBlur = () => {
-			setSkipPageReset(false)
+			setSkipPageReset(false);
 			updateMyData(row.index, id, value);
 			apiClient
 				.post("api/account_receivable/update", {
@@ -111,7 +113,7 @@ const AccountReceivableList = () => {
 	};
 
 	useEffect(() => {
-		setSkipPageReset(false)
+		setSkipPageReset(false);
 	}, [accountReceivable]);
 
 	const columnsAccount = useMemo(() => [
@@ -148,7 +150,6 @@ const AccountReceivableList = () => {
 			{
 				Header: t("element.overdue"),
 				accessor: "overdue",
-				Filter: false,
 				sortType: "basic",
 			},
 			{
@@ -161,9 +162,9 @@ const AccountReceivableList = () => {
 			},
 			{
 				Header: t("element.amount"),
-				accessor: 'amount',
-				Cell:({row}) => {
-					return numberWithComma(row.original.amount)
+				accessor: "amount",
+				Cell: ({ row }) => {
+					return numberWithComma(row.original.amount);
 				},
 				Filter: false,
 			},
@@ -178,7 +179,7 @@ const AccountReceivableList = () => {
 							className="h-6 bg-secondary focus:outline-none transition ease-in-out duration-300 rounded-md border border-gray-200 dark:border-gray-700 ring ring-transparent focus:border-blue-600 focus:ring-blue-400/50"
 							value={filterValue}
 							onChange={(e) => {
-								setSkipPageReset(true)
+								setSkipPageReset(true);
 								setFilter(e.target.value || undefined);
 							}}
 						>
@@ -213,6 +214,7 @@ const AccountReceivableList = () => {
 				autoResetPage={skipPageReset}
 				updateMyData={updateMyData}
 				trOnClick={handleClickTable}
+				trClassName
 			/>
 			{itemModalOpen && (
 				<CustomModal

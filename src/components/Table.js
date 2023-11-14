@@ -567,8 +567,8 @@ function Table({
 															<React.Fragment key={i}>
 																<tr
 																	className={`odd:bg-primary even:bg-secondary ${
-																		trClassName && row.original.is_tax
-																			? "text-buttonPrimary"
+																		trClassName && row.original.overdue < 0
+																			? "text-red-600"
 																			: trOnClick &&
 																			  "cursor-pointer select-none"
 																	}`}
