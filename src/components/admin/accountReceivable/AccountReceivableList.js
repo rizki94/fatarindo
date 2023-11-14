@@ -18,7 +18,7 @@ const AccountReceivableList = () => {
 	useDocTitle(title);
 	const { auth } = useAuth();
 	const toast = useToast();
-	const skipPageResetRef = useRef(false);
+	const [skipPageReset, setSkipPageReset] = useState(false);
 	const [id, setId] = useState(0);
 	const [itemModalOpen, setItemModalOpen, toggleModal] = useModal();
 	const { data, isLoading } = useFetch("api/account_receivable/list");
@@ -52,6 +52,7 @@ const AccountReceivableList = () => {
 	}, [data]);
 
 	const updateMyData = (rowIndex, columnId, value) => {
+		setSkipPageReset(false)
 		setAccountReceivable((old) =>
 			old.map((row, index) => {
 				if (index === rowIndex) {
@@ -74,6 +75,7 @@ const AccountReceivableList = () => {
 		const [value, setValue] = useState(initialValue);
 
 		const onBlur = () => {
+			setSkipPageReset(false)
 			updateMyData(row.index, id, value);
 			apiClient
 				.post("api/account_receivable/update", {
@@ -109,7 +111,7 @@ const AccountReceivableList = () => {
 	};
 
 	useEffect(() => {
-		skipPageResetRef.current = false;
+		setSkipPageReset(false)
 	}, [accountReceivable]);
 
 	const columnsAccount = useMemo(() => [
@@ -173,7 +175,7 @@ const AccountReceivableList = () => {
 							className="h-6 bg-secondary focus:outline-none transition ease-in-out duration-300 rounded-md border border-gray-200 dark:border-gray-700 ring ring-transparent focus:border-blue-600 focus:ring-blue-400/50"
 							value={filterValue}
 							onChange={(e) => {
-								skipPageResetRef.current = true;
+								setSkipPageReset(true)
 								setFilter(e.target.value || undefined);
 							}}
 						>
@@ -188,7 +190,7 @@ const AccountReceivableList = () => {
 				},
 			},
 		],
-		[t, status, skipPageResetRef]
+		[t, status, skipPageReset]
 	);
 
 	const handleClickTable = (data) => {
@@ -205,7 +207,7 @@ const AccountReceivableList = () => {
 				disableFilters={false}
 				disableSortBy={false}
 				pagination
-				autoResetPage={!skipPageResetRef.current}
+				autoResetPage={skipPageReset}
 				updateMyData={updateMyData}
 				trOnClick={handleClickTable}
 			/>
