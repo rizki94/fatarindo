@@ -199,7 +199,7 @@ const AccountReceivableList = () => {
 	};
 
 	return (
-		<Container>
+		<Container title={title}>
 			<Table
 				data={accountReceivable}
 				columns={columns}
