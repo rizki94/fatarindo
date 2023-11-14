@@ -213,7 +213,10 @@ const AccountReceivableList = () => {
 				<CustomModal
 					title={t("general.changes")}
 					isActive={itemModalOpen}
-					handleClose={() => setItemModalOpen(false)}
+					handleClose={() => {
+						setItemModalOpen(false);
+						setId(0);
+					}}
 				>
 					<Table
 						data={account_receivable_date}
