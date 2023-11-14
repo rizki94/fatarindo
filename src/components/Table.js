@@ -360,6 +360,20 @@ function Table({
 		[]
 	);
 
+	const [width, setWidth] = useState(window.innerWidth);
+	
+	function handleWindowSizeChange() {
+		setWidth(window.innerWidth);
+	}
+	useEffect(() => {
+		window.addEventListener("resize", handleWindowSizeChange);
+		return () => {
+			window.removeEventListener("resize", handleWindowSizeChange);
+		};
+	}, []);
+	
+	const isMobile = width <= 768;
+
 	const defaultColumn = useMemo(
 		() => ({
 			Filter: DefaultColumnFilter,
@@ -697,7 +711,7 @@ function Table({
 				</div>
 			</div>
 			{pagination && (
-				<div className="flex flex-row flex-wrap justify-start my-2 items-center">
+				<div className="flex flex-row flex-wrap lg:justify-start justify-center my-2 items-center">
 					<button
 						className="h-8 px-4 text-primary border-border border border-r-0 rounded-l-md focus:shadow-outline hover:bg-buttonPrimary hover:text-white disabled:bg-secondary disabled:text-secondary"
 						onClick={() => gotoPage(0)}
@@ -726,48 +740,52 @@ function Table({
 					>
 						{">>"}
 					</button>
-					<span className="px-2 text-primary">
-						{`
+					{!isMobile && (
+						<div>
+							<span className="px-2 text-primary">
+								{`
                                 ${t("table.pagination.page")} ${pageIndex + 1}
                                 ${t("table.pagination.from")}
                                 ${pageOptions.length}`}
-					</span>
-					<span>|</span>
-					<label className="px-2 text-primary" htmlFor="goToPage">
-						{t("table.pagination.goToPage")}
-					</label>
-					<input
-						id='goToPage'
-						className="mr-2 border rounded h-5 text-primary bg-secondary text-center"
-						defaultValue={pageIndex + 1}
-						onChange={(e) => {
-							const page = e.target.value ? Number(e.target.value) - 1 : 0;
-							gotoPage(page);
-						}}
-						style={{ width: "20px" }}
-					/>
-					<span>|</span>
-					<label htmlFor='rowInPage' className="px-2 text-primary">
-						{t("table.pagination.rowInPage")}
-					</label>
-					<select
-						id='rowInPage'
-						className="mr-2 border rounded bg-secondary text-primary"
-						value={pageSize}
-						onChange={(e) => {
-							setPageSize(Number(e.target.value));
-						}}
-					>
-						{[10, 20, 30, 40, 50].map((pageSize) => (
-							<option key={pageSize} value={pageSize}>
-								{pageSize}
-							</option>
-						))}
-					</select>
-					<span>|</span>
-					<span className="px-2 text-primary">
-						{rows.length} {t("table.pagination.result")}
-					</span>
+							</span>
+							<span>|</span>
+							<label className="px-2 text-primary" htmlFor="goToPage">
+								{t("table.pagination.goToPage")}
+							</label>
+							<input
+								id="goToPage"
+								className="mr-2 border rounded h-5 text-primary bg-secondary text-center"
+								defaultValue={pageIndex + 1}
+								onChange={(e) => {
+									const page = e.target.value ? Number(e.target.value) - 1 : 0;
+									gotoPage(page);
+								}}
+								style={{ width: "20px" }}
+							/>
+							<span>|</span>
+							<label htmlFor="rowInPage" className="px-2 text-primary">
+								{t("table.pagination.rowInPage")}
+							</label>
+							<select
+								id="rowInPage"
+								className="mr-2 border rounded bg-secondary text-primary"
+								value={pageSize}
+								onChange={(e) => {
+									setPageSize(Number(e.target.value));
+								}}
+							>
+								{[10, 20, 30, 40, 50].map((pageSize) => (
+									<option key={pageSize} value={pageSize}>
+										{pageSize}
+									</option>
+								))}
+							</select>
+							<span>|</span>
+							<span className="px-2 text-primary">
+								{rows.length} {t("table.pagination.result")}
+							</span>
+						</div>
+					)}
 				</div>
 			)}
 		</>
