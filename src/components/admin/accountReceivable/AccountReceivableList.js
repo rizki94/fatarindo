@@ -188,7 +188,7 @@ const AccountReceivableList = () => {
 				},
 			},
 		],
-		[t, status]
+		[t, status, skipPageResetRef]
 	);
 
 	const handleClickTable = (data) => {
@@ -205,7 +205,7 @@ const AccountReceivableList = () => {
 				disableFilters={false}
 				disableSortBy={false}
 				pagination
-				autoResetPage={skipPageResetRef.current}
+				autoResetPage={!skipPageResetRef.current}
 				updateMyData={updateMyData}
 				trOnClick={handleClickTable}
 			/>
