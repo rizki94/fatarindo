@@ -23,7 +23,15 @@ const AccountReceivableList = () => {
 	const [filter, setFilter] = useState(false);
 	const [id, setId] = useState(0);
 	const [itemModalOpen, setItemModalOpen, toggleModal] = useModal();
-	const { data, isLoading } = useFetch("api/account_receivable/list");
+	const { data, isLoading } = useFetchWithParams(
+		"api/account_receivable/list",
+		{
+			params: {
+				completed: filter,
+			},
+		},
+		filter
+	);
 	const { data: status } = useFetch("api/status/list");
 	const { data: account_receivable_date, isLoading: accountReceivableLoading } =
 		useFetchWithParams(
@@ -80,7 +88,7 @@ const AccountReceivableList = () => {
 		const [value, setValue] = useState(initialValue);
 
 		const onBlur = () => {
-			setSkipResetPage(true)
+			setSkipResetPage(true);
 			updateMyData(row.index, id, value);
 		};
 
@@ -182,7 +190,7 @@ const AccountReceivableList = () => {
 							className="h-6 bg-secondary focus:outline-none transition ease-in-out duration-300 rounded-md border border-gray-200 dark:border-gray-700 ring ring-transparent focus:border-blue-600 focus:ring-blue-400/50"
 							value={filterValue}
 							onChange={(e) => {
-								setSkipResetPage(false)
+								setSkipResetPage(false);
 								setFilter(e.target.value || undefined);
 							}}
 						>
@@ -206,11 +214,13 @@ const AccountReceivableList = () => {
 	};
 
 	return (
-		<Container title={title}>
+		<Container title={title} navigation1={
 			<div className="flex flex-row">
-				<ButtonBorder>Complete</ButtonBorder>
-				<ButtonBorder>Not Complete</ButtonBorder>
-			</div>
+				<ButtonBorder className={`${!filter && 'border-b-4 border-buttonPrimary text-buttonPrimary'}`} onClick={() => setFilter(false)}>
+					Not Complete
+				</ButtonBorder>
+				<ButtonBorder className={`${filter && 'border-b-4 border-buttonPrimary text-buttonPrimary'}`} onClick={() => setFilter(true)}>Complete</ButtonBorder>
+			</div>}>
 			<Table
 				data={accountReceivable}
 				columns={columns}
