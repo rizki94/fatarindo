@@ -12,7 +12,7 @@ const classes = {
         large: 'px-8 py-3 text-lg'
     },
     variant: {
-        primary: 'text-primary hover:text-secondary hover:border-b-4 hover:border-border active:bg-red-900',
+        primary: 'text-primary hover:text-secondary hover:border-b-4 hover:border-secondary active:bg-red-900',
         secondary: '',
         success: '',
         danger: '',

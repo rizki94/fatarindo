@@ -11,6 +11,7 @@ import { useToast } from "../../../hooks/useToast";
 import CustomModal from "../../../layouts/modal";
 import { useModal } from "../../../hooks/useModal";
 import moment from "moment/moment";
+import ButtonBorder from "../../../layouts/forms/ButtonBorder";
 
 const AccountReceivableList = () => {
 	const [t] = useTranslation();
@@ -18,7 +19,8 @@ const AccountReceivableList = () => {
 	useDocTitle(title);
 	const { auth } = useAuth();
 	const toast = useToast();
-	const [skipPageReset, setSkipPageReset] = useState(false);
+	const [skipResetPage, setSkipResetPage] = useState(true);
+	const [filter, setFilter] = useState(false);
 	const [id, setId] = useState(0);
 	const [itemModalOpen, setItemModalOpen, toggleModal] = useModal();
 	const { data, isLoading } = useFetch("api/account_receivable/list");
@@ -39,22 +41,23 @@ const AccountReceivableList = () => {
 	useEffect(() => {
 		if (data.length > 0) {
 			setAccountReceivable(
-				[...data].map((object) => {
-					const due_date = new Date(object.due_date);
-					const diffTime = due_date - new Date();
-					return {
-						...object,
-						overdue: Math.ceil(diffTime / (1000 * 60 * 60 * 24)),
-					};
-				}).sort((a, b) => {
-					return a.overdue-b.overdue
-				})
-			)
+				[...data]
+					.map((object) => {
+						const due_date = new Date(object.due_date);
+						const diffTime = due_date - new Date();
+						return {
+							...object,
+							overdue: Math.ceil(diffTime / (1000 * 60 * 60 * 24)),
+						};
+					})
+					.sort((a, b) => {
+						return a.overdue - b.overdue;
+					})
+			);
 		}
 	}, [data]);
 
 	const updateMyData = (rowIndex, columnId, value) => {
-		setSkipPageReset(false);
 		setAccountReceivable((old) =>
 			old.map((row, index) => {
 				if (index === rowIndex) {
@@ -77,17 +80,8 @@ const AccountReceivableList = () => {
 		const [value, setValue] = useState(initialValue);
 
 		const onBlur = () => {
-			setSkipPageReset(false);
+			setSkipResetPage(true)
 			updateMyData(row.index, id, value);
-			apiClient
-				.post("api/account_receivable/update", {
-					data: { ...row.original, status_id: value, user_id: auth.user.id },
-				})
-				.then((response) => {
-					if (response.data.status === 200) {
-						toast("success", t("toast.add.success"));
-					}
-				});
 		};
 
 		useEffect(() => {
@@ -101,6 +95,19 @@ const AccountReceivableList = () => {
 				value={value}
 				onChange={(e) => {
 					setValue(e.target.value);
+					apiClient
+						.post("api/account_receivable/update", {
+							data: {
+								...row.original,
+								status_id: e.target.value,
+								user_id: auth.user.id,
+							},
+						})
+						.then((response) => {
+							if (response.data.status === 200) {
+								toast("success", t("toast.add.success"));
+							}
+						});
 				}}
 				onBlur={onBlur}
 			/>
@@ -111,10 +118,6 @@ const AccountReceivableList = () => {
 		const momentDate = moment(value);
 		return momentDate.format("YYYY-MM-DD hh:mm:ss");
 	};
-
-	useEffect(() => {
-		setSkipPageReset(false);
-	}, [accountReceivable]);
 
 	const columnsAccount = useMemo(() => [
 		{
@@ -179,7 +182,7 @@ const AccountReceivableList = () => {
 							className="h-6 bg-secondary focus:outline-none transition ease-in-out duration-300 rounded-md border border-gray-200 dark:border-gray-700 ring ring-transparent focus:border-blue-600 focus:ring-blue-400/50"
 							value={filterValue}
 							onChange={(e) => {
-								setSkipPageReset(true);
+								setSkipResetPage(false)
 								setFilter(e.target.value || undefined);
 							}}
 						>
@@ -194,7 +197,7 @@ const AccountReceivableList = () => {
 				},
 			},
 		],
-		[t, status, skipPageReset]
+		[t, status]
 	);
 
 	const handleClickTable = (data) => {
@@ -204,6 +207,10 @@ const AccountReceivableList = () => {
 
 	return (
 		<Container title={title}>
+			<div className="flex flex-row">
+				<ButtonBorder>Complete</ButtonBorder>
+				<ButtonBorder>Not Complete</ButtonBorder>
+			</div>
 			<Table
 				data={accountReceivable}
 				columns={columns}
@@ -211,7 +218,7 @@ const AccountReceivableList = () => {
 				disableFilters={false}
 				disableSortBy={false}
 				pagination
-				autoResetPage={skipPageReset}
+				autoResetPage={skipResetPage}
 				updateMyData={updateMyData}
 				trOnClick={handleClickTable}
 				trClassName

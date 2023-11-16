@@ -324,7 +324,7 @@ function Table({
 	scrollToBot,
 	selectedRows,
 	onSelectedRowsChange,
-	autoResetPage,
+	autoResetPage = true,
 	isLoading,
 	columns,
 	data,
@@ -408,7 +408,8 @@ function Table({
 			initialState: {
 				selectedRowIds: selectedRows ? selectedRows : "",
 			},
-			autoResetPage: autoResetPage,
+			autoResetFilters: !autoResetPage,
+			autoResetPage: !autoResetPage,
 			defaultColumn,
 			filterTypes,
 			updateMyData,
