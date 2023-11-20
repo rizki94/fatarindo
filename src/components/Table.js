@@ -361,7 +361,7 @@ function Table({
 	);
 
 	const [width, setWidth] = useState(window.innerWidth);
-	
+
 	function handleWindowSizeChange() {
 		setWidth(window.innerWidth);
 	}
@@ -371,7 +371,7 @@ function Table({
 			window.removeEventListener("resize", handleWindowSizeChange);
 		};
 	}, []);
-	
+
 	const isMobile = width <= 768;
 
 	const defaultColumn = useMemo(
@@ -496,7 +496,7 @@ function Table({
 								</div>
 							) : (
 								<table
-									className="w-full items-center text-sm border-collapse"
+									className="w-full items-center text-sm border-collapse select-none"
 									{...getTableProps()}
 								>
 									<thead className="sticky top-0 bg-secondary ring-1 ring-border z-0">
