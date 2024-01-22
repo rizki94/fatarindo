@@ -118,7 +118,7 @@ const AccountReceivableImport = () => {
 		const date = dateValues.substring(0, 2);
 		const month = dateValues.substring(3, 5);
 		const year = dateValues.substring(6, 11);
-		return new Date(year, month, date);
+		return new Date(year, month - 1, date);
 	};
 
 	const changeImportData = (col) => {
@@ -146,20 +146,25 @@ const AccountReceivableImport = () => {
 		return Object.values(object).every((value) => value !== "0");
 	};
 
+	const [submitLoading, setSubmitLoading] = useState(false);
+
 	const handleConvert = () => {
+		setSubmitLoading(true);
 		apiClient
 			.post("api/account_receivable/convert", {
 				data: importData,
 			})
 			.then((response) => {
 				if (response.data.status === 200) {
-					toast("success", `${response.data.count} Row Berhasil Diimport`);
+					toast("success", t("toast.update.success"));
+					setSubmitLoading(false);
 				} else {
 					let errorMsg = {};
 					errorMsg = response.data.validateErr;
 					const values = Object.values(errorMsg);
 					for (let i = 0; i < values.length; i++) {
 						toast("error", values[i]);
+						setSubmitLoading(false);
 					}
 				}
 			});
@@ -174,6 +179,7 @@ const AccountReceivableImport = () => {
 						variant="danger"
 						onClick={handleConvert}
 						disabled={!allPropsNull(column)}
+						buttonLoading={submitLoading}
 					>
 						{t("general.import")}
 					</Button>

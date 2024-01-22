@@ -47,23 +47,21 @@ const AccountReceivableList = () => {
 	const [accountReceivable, setAccountReceivable] = useState([]);
 
 	useEffect(() => {
-		if (data.length > 0) {
-			setAccountReceivable(
-				[...data]
-					.map((object) => {
-						const due_date = new Date(object.due_date);
-						const diffTime = due_date - new Date();
-						return {
-							...object,
-							overdue: Math.ceil(diffTime / (1000 * 60 * 60 * 24)),
-						};
-					})
-					.sort((a, b) => {
-						return a.overdue - b.overdue;
-					})
-			);
-		}
-	}, [data]);
+		setAccountReceivable(
+			[...data]
+				.map((object) => {
+					const due_date = new Date(object.due_date);
+					const diffTime = due_date - new Date();
+					return {
+						...object,
+						overdue: Math.ceil(diffTime / (1000 * 60 * 60 * 24)),
+					};
+				})
+				.sort((a, b) => {
+					return a.overdue - b.overdue;
+				})
+		);
+	}, [data, filter]);
 
 	const updateMyData = (rowIndex, columnId, value) => {
 		setAccountReceivable((old) =>
@@ -214,13 +212,29 @@ const AccountReceivableList = () => {
 	};
 
 	return (
-		<Container title={title} navigation1={
-			<div className="flex flex-row">
-				<ButtonBorder className={`${!filter && 'border-b-4 border-buttonPrimary text-buttonPrimary'}`} onClick={() => setFilter(false)}>
-					Not Complete
-				</ButtonBorder>
-				<ButtonBorder className={`${filter && 'border-b-4 border-buttonPrimary text-buttonPrimary'}`} onClick={() => setFilter(true)}>Complete</ButtonBorder>
-			</div>}>
+		<Container
+			title={title}
+			navigation1={
+				<div className="flex flex-row">
+					<ButtonBorder
+						className={`${
+							!filter && "border-b-4 border-buttonPrimary text-buttonPrimary"
+						}`}
+						onClick={() => setFilter(false)}
+					>
+						Not Complete
+					</ButtonBorder>
+					<ButtonBorder
+						className={`${
+							filter && "border-b-4 border-buttonPrimary text-buttonPrimary"
+						}`}
+						onClick={() => setFilter(true)}
+					>
+						Complete
+					</ButtonBorder>
+				</div>
+			}
+		>
 			<Table
 				data={accountReceivable}
 				columns={columns}

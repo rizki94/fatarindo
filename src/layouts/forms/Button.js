@@ -60,7 +60,7 @@ const Button = forwardRef(
                     ${classes.base}
                     ${classes.size[size]}
                     ${classes.variant[variant]}
-                    ${disabled && classes.disabled}
+                    ${(disabled || buttonLoading) && classes.disabled}
                     ${className}
                 `)}
 				{...props}
